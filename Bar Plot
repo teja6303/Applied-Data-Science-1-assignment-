@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+
+import pandas as pd
+
+
+df = pd.read_csv('Canada.csv')
+
+death_rate = df.iloc[:,4]
+
+print(death_rate)
+
+plt.hist(death_rate)
+
+plt.xlabel('Death Rate')
+plt.ylabel('Recorded frequency')
+
+plt.title('Death Rates in Canada')
+plt.show()
