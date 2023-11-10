@@ -1,0 +1,33 @@
+import matplotlib.pyplot as plt
+
+import pandas as pd
+
+
+df = pd.read_csv('Great Britain.csv')
+df1 = pd.read_csv('India.csv')
+df2 = pd.read_csv('China.csv')
+df3 = pd.read_csv('Canada.csv')
+df4 = pd.read_csv('Japan.csv')
+
+Years = df.iloc[:,18]
+
+Britain_birth_rate = df.iloc[:,3]
+
+India_birth_rate = df1.iloc[:,3]
+China_birth_rate = df2.iloc[:,3]
+Canada_birth_rate = df3.iloc[:,3]
+Japan_birth_rate = df4.iloc[:,3]
+
+
+plt.plot(Years,Britain_birth_rate,label='Britain Birth Rate')
+plt.plot(Years,India_birth_rate,label='Indian Birth Rate')
+plt.plot(Years,China_birth_rate,label='China Birth Rate')
+plt.plot(Years,Canada_birth_rate,label='Canada Birth Rate')
+plt.plot(Years,Japan_birth_rate,label='Japan Birth Rate')
+
+plt.xlabel('Years')
+plt.ylabel('Birth Rate')
+
+plt.title('Birth Rates by different countries')
+plt.legend()
+plt.show()
