@@ -1,0 +1,16 @@
+import matplotlib.pyplot as plt
+
+import pandas as pd
+
+
+df = pd.read_csv('Great Britain.csv')
+
+Years = df.iloc[0:8,18]
+
+GDP = df.iloc[0:8,11]
+
+b1 = [0,0,0,0,0.2,0,0,0]
+
+plt.pie(GDP,labels=Years,explode=b1,autopct='%2.1f%%')
+
+plt.show()
